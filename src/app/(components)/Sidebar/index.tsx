@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { LockIcon } from "lucide-react";
 
 const Sidebar = () => {
     const [showProjects, setShowProjects] = useState(true);
@@ -19,13 +20,24 @@ const Sidebar = () => {
 
             <div className="z-50 flex min-h-[56px] w-64 items-center justify-between bg-white px-6 pt-3 dark:bg-black">
                 <div className="text-xl font-bold text-gray-800 dark:text-white">
-                    EDLIST
+                    LIST
                 </div>
             </div>
-        </div>
-        {/* Team */}
-        <div className="flex items-center gap-5 border-y-[1.5px] border-gray-200 px-8 py-4 dark:border-gray-700">
-            <Image src="/logo.png" alt="Logo" width={40} height={40} />
+            {/* Team */}
+            <div className="flex items-center gap-5 border-y-[1.5px] border-gray-200 px-8 py-4 dark:border-gray-700">
+                <Image src="/logo.png" alt="Logo" width={40} height={40} />
+                <div>
+                    <h3 className="text-md font-bold tracking-wide dark:text-gray-200">
+                        TEAM
+                    </h3>
+                    <div className="mt-1 flex items-start gap-2">
+                        <LockIcon className="mt-[0.1 rem] h-3 w-3 text-gray-500 dark:text-gray-400" />
+                        <p className="text xs text-gray-500">Private</p>
+                    </div>
+                </div>
+            </div>
+            {/* Navbar Links */}
+
         </div>
     </div>
     );
